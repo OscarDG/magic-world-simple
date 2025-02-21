@@ -5,5 +5,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
         experimental:{
             svg: true,
-        }
+        },
+
+        site: "https://OscarDG.github.io",
+        base: "magic-world-simple"
 });
