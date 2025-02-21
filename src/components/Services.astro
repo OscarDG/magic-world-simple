@@ -48,9 +48,9 @@ console.log(limitedServices)
         if(event.matches){
             document.addEventListener("DOMContentLoaded", () => {
                 import("motion").then(({ scroll, animate }) => {
-                scroll(animate(".planet1", { y: [-300, 0], x: [-300, 0] }, { duration: .2 }));
-                scroll(animate(".planet2", { x: [100, 0] }, { duration: .5 }));
-                scroll(animate(".planet3", { y: [-300, 0], x: [150, 0] }, { duration: .5 }));
+                scroll(animate(".planet1", {y: [300, 0] }, { duration: .2 }));
+                scroll(animate(".planet2", {y: [300, 0] }, { duration: .2 }));
+                scroll(animate(".planet3", {y: [300, 0] }, { duration: .2 }));
                 });
             });
         }else{
