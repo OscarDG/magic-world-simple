@@ -10,7 +10,7 @@
   }
   .section_clouds {
     position: absolute;
-    top: -4%;
+    top: -12%;
     width: 100%;
     height: 300px;
   }
@@ -83,6 +83,7 @@
     margin-top: 0%;
   }
   .section_content_text p {
+    font-family: "Sour Gummy", serif;
     width: 90%;
     height: 70%;
     text-align: center;
@@ -104,9 +105,11 @@
     position: absolute;
     top: -15%;
     width: 100%;
+    height: 18%;
   }
   .section_clouds img {
     width: 100%;
+    height: 100%;
   }
   .section_content {
     position: relative;
@@ -164,6 +167,7 @@
     height: 60%;
   }
   .section_content_text h2 {
+    font-display: "Sour Gummy", serif;
     color: #E574BC;
     font-size: 3vw;
     margin-top: 5%;
@@ -173,5 +177,6 @@
     height: 70%;
     text-align: center;
     font-size: 1.5vw;
+    font-display: "Sour Gummy", serif;
   }
 }/*# sourceMappingURL=section.css.map */

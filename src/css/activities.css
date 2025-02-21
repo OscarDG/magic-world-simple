@@ -8,6 +8,7 @@
     width: 100%;
     height: auto;
     background: #D4F6FF;
+    padding: 20px 0;
   }
   .activities h1 {
     position: absolute;
@@ -15,7 +16,7 @@
     width: 60%;
     height: auto;
     color: #27445D;
-    font-size: clamp(1.5rem, 1rem + 0.8vw, 3rem);
+    font-size: clamp(2rem, 1rem + 0.8vw, 3rem);
     text-align: center;
   }
   .activities_content {
@@ -37,7 +38,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 95%;
-    height: 75vh;
+    height: 55vh;
     margin-top: 10%;
     background: #FBFBFB;
     border: 0;
@@ -62,14 +63,11 @@
   }
   .activities-card-info {
     position: absolute;
-    top: 0;
-    left: 0px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    height: 85%;
+    height: 80%;
     background: #FBFBFB;
     border: 0;
     border-radius: 20px;
@@ -80,28 +78,36 @@
   }
   .activities-card-info p:nth-child(1) {
     width: 85%;
-    height: 10%;
-    margin-top: 20%;
-    margin-bottom: 40%;
+    height: 50%;
+    margin-top: 5%;
     color: #25282A;
     text-align: center;
     font-size: clamp(1.5rem, 1rem + 0.8vw, 2rem);
   }
   .activities-card-info p:nth-child(2) {
     font-size: clamp(1.5rem, 1rem + 0.8vw, 2rem);
+    width: 85%;
+    height: 10%;
+    text-align: center;
   }
   .activities-card-info p:nth-child(3) {
     font-size: clamp(1.5rem, 1rem + 0.8vw, 2rem);
+    width: 85%;
+    height: 10%;
+    text-align: center;
   }
   .activities-card-info p:nth-child(4) {
     font-size: clamp(1.5rem, 1rem + 0.8vw, 2rem);
+    width: 85%;
+    height: 10%;
+    text-align: center;
   }
   .activities-card-info strong {
     color: #E574BC;
   }
   .activities-card--image {
     width: 90%;
-    height: 40%;
+    height: 38%;
     border-radius: 15px 15px 0 0;
     margin-bottom: 5%;
   }
@@ -117,7 +123,7 @@
     align-items: center;
     width: 90%;
     height: 10%;
-    font-size: clamp(2rem, 1rem + 0.5vw, 3rem);
+    font-size: clamp(1.5rem, 1rem + 0.5vw, 2rem);
     color: #27445D;
     margin-left: 0%;
   }
@@ -128,14 +134,14 @@
     margin-left: 0%;
     margin-bottom: 30%;
     width: 80%;
-    font-size: clamp(1.5rem, 1rem + 0.5vw, 2rem);
+    font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
   }
   .activities-more {
     position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 0%;
+    bottom: 2%;
     right: 5%;
     width: 90%;
     height: 12%;
@@ -194,7 +200,7 @@
     width: 30%;
     height: auto;
     color: #27445D;
-    font-size: 1.8vw;
+    font-size: clamp(2rem, 1rem + 0.8vw, 3rem);
     text-align: center;
   }
   .activities_content {
