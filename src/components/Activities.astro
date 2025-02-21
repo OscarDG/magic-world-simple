@@ -1,0 +1,41 @@
+---
+import '../css/activities.css'
+import ActivitiesCard from '../components/Activities_card.astro'
+import activitiesData from '../content/activities.json'
+
+const {result} = activitiesData;
+const {activities} = result;
+const maxActivities = 3;
+const limitedActivities = activities.slice(0, maxActivities)
+---
+
+<section class="activities" id="features">
+    <h1>Actividades</h1>
+    <div class="activities_content">
+        {
+            limitedActivities.length > 0 ? (
+            <>
+                {
+                    limitedActivities.map((activity) => (
+                        <ActivitiesCard {...activity}/>
+                    ))
+                }
+            </>
+            ) : null
+        }
+    </div>
+</section>
+<script>
+    document.querySelectorAll(".card-btn").forEach(button => {
+    button.addEventListener("click", function() {
+
+        const card = this.closest(".activities-card");
+        const infoCard = card.querySelector(".activities-card-info");
+        if (infoCard) {
+            infoCard.classList.toggle("active");
+        }
+
+        this.textContent = infoCard.classList.contains("active") ? "Cerrar" : 'Ver más';
+    });
+});
+</script>

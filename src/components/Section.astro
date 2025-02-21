@@ -1,0 +1,53 @@
+---
+import '../css/section.css'
+import Star from '../components/Star.astro'
+import StarTwo from './StarTwo.astro'
+import { Image } from 'astro:assets';
+import HeroImage from '/src/assets/kids-playing.webp'
+
+---
+
+<section class="main_section" id="main_section">
+    <div class="section_clouds">
+        <img src='/src/assets/clouds.svg' alt='Clouds'/>
+    </div>
+    <div class="section_content">
+        <div class="section_content_image">
+            <Image src={HeroImage} alt="Kids"/>
+        </div>
+        <div  class="section_content_stars--up">
+            <Star />
+        </div>
+        <div class="section_content_stars--down">
+            <StarTwo />
+        </div>
+        <div class="section_content_text">
+            <h2>Nuestra promesa </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam nibh, suscipit in orci et, varius gravida nisl. Quisque tincidunt tortor egestas molestie fermentum. Mauris tincidunt semper ultrices. Sed non vestibulum felis, congue ornare neque. Mauris nec tempus velit. Nullam ullamcorper sapien libero, non placerat enim egestas ut. Etiam interdum viverra turpis. Donec eget nisi tristique, mattis enim id, hendrerit erat.
+            </p>
+        </div>
+    </div>
+</section>
+<script>
+//Identify if the viewport matches with a given criteria and trigger the animation
+
+function handleViewPortChange(event) {
+    if(event.matches){
+    import("motion").then(({ scroll, animate }) => {
+      scroll(animate(".section_content_text", { y: [0, -100]}, { duration: 1 }));
+    });
+    }else{
+        import("motion").then(({ scroll, animate }) => {
+        scroll(animate(".section_content_text", { x: [0.5, -100]}, { duration: .1 }));
+    })
+  }
+}
+
+const mediaQuery = window.matchMedia("(min-width: 350px) and (max-width: 1024px )")
+
+mediaQuery.addEventListener("change", handleViewPortChange);
+
+handleViewPortChange(mediaQuery);
+
+</script>

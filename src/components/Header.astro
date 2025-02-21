@@ -1,0 +1,40 @@
+---
+import '../css/index.css'
+import {Image} from 'astro:assets'
+import Logo from '../assets/logo.webp'
+
+---
+<header class="main_header">
+    <div class="header_logo">
+        <a href="/">
+            <Image src={Logo} alt="Header Logo" loading={'eager'}/>
+        </a>
+    </div>
+    <div class="header_menu_mobile">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    <nav class="header_nav">
+        <ul class="nav_list">
+            <a href="#main_section"><li>Sobre nosotros</li></a>
+            <a href="#services"><li>Nuestros servicios</li></a>
+            <a href="#team"><li>Nuestro equipo</li></a>
+        </ul>
+    </nav>
+    <a class="header_btn--contact" href="http://wa.me/573103468979" target="_blank">Contacto</a>
+</header>
+<script>
+    const navBtn = document.querySelector('.header_menu_mobile');
+
+    navBtn.addEventListener('click', function(){
+        document.querySelectorAll('.line').forEach(line => {
+            line.classList.toggle('open');
+        });
+        const navList = document.querySelector('.header_nav')
+            if(navList){
+                navList.classList.toggle('open')
+            };
+    });
+</script>

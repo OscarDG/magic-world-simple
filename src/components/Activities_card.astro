@@ -1,0 +1,41 @@
+---
+import '../css/activities.css'
+import register from '../assets/Register.gif'
+import { Image } from 'astro:assets'
+
+interface Props {
+    activity_name: string,
+    date: string,
+    hour: string,
+    place: string,
+    excerpt: string,
+    description: string,
+    thumb: string,
+}
+
+const {activity_name, description, thumb, excerpt, hour, place, date} = Astro.props
+
+---
+<div class="activities-card">
+    <div class="activities-card-info">
+        <p>{description}</p>
+        <p>{date}</p>
+        <p>{place}</p>
+        <p>{hour}</p>
+    </div>
+    <div class="activities-card-content">
+        <div class="activities-card--image">
+            <Image src={thumb} alt="Kids playing" width={100} height={100}/>
+        </div>
+        <div class="activities-card--tittle">
+            <h3 set:html={activity_name}></h3>
+        </div>
+        <div class="activities-card--text">
+            <p>{excerpt}</p>
+        </div>
+        <div class="activities-more">
+            <a href="/" target="_blank"><Image src={register} alt="registro" class="card-register" />Registrate</a>
+            <button class="card-btn">Ver más</button>
+        </div>
+    </div>
+</div>

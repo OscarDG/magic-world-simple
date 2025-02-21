@@ -1,0 +1,15 @@
+---
+import '/src/css/section.css'
+import Icon from '../assets/stars.svg'
+---
+
+<Icon class="star-up" id= 'star'/>
+
+<script>
+    //Activate the animation with scroll
+    document.addEventListener("DOMContentLoaded", () => {
+      import("motion").then(({ animate, scroll }) => {
+        scroll(animate("#star", { x: 180, y: 180, rotate: 360 }, { duration: 1 }));
+      });
+    });
+</script>
