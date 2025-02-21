@@ -37,7 +37,7 @@
             "place": "Parque Simón Bolivar",
             "excerpt": "Diviertete con tus amigos en nuestras actividades acuáticas supervisadas.",
             "description": "No hay un mejor servicio!",
-            "thumb":"/Src/assets/oldwoman-portrait.webp"
+            "thumb":"/src/assets/oldwoman-portrait.webp"
         }
       ]
     }
