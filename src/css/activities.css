@@ -221,7 +221,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 30%;
-    height: 90%;
+    height: 95%;
     max-height: 1000px;
     background: #FBFBFB;
     border: 0;
@@ -232,8 +232,7 @@
     z-index: 2;
   }
   .activities-card-content {
-    position: absolute;
-    left: 0;
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -255,8 +254,8 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 85%;
-    max-height: 1000px;
+    height: 82%;
+    max-height: 900px;
     background: #FBFBFB;
     border: 0;
     border-radius: 20px;
@@ -307,22 +306,24 @@
     justify-content: flex-start;
     align-items: center;
     width: 80%;
-    height: 10%;
+    height: auto;
+    max-height: 5%;
     margin-left: -10%;
     margin-bottom: 2%;
   }
   .activities-card--tittle h3 {
     width: 90%;
     color: #27445D;
-    font-size: 1.3vw;
+    font-size: clamp(1.5rem, 1rem + 0.5vw, 2rem);
   }
   .activities-card--text {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-left: -9%;
+    margin-bottom: 2%;
     width: 82%;
-    font-size: 1.2vw;
+    font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
   }
   .activities-more {
     position: absolute;

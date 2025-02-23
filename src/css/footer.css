@@ -5,6 +5,7 @@
     flex-direction: column;
     width: 100%;
     height: 50vh;
+    padding: 0;
   }
   .footer-content {
     display: flex;
@@ -142,6 +143,7 @@
     flex-flow: colum nowrap;
     width: 100%;
     height: 40vh;
+    padding: 0;
   }
   .footer-content {
     display: flex;
