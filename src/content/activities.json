@@ -10,7 +10,7 @@
           "place": "Instalaciones del Jardín",
           "excerpt": "Diviertete con tus amigos en nuestras actividades acuáticas supervisadas.",
           "description": "Great service!",
-          "thumb":"portrait-man.webp"
+          "thumb":"src/assets/portrait-man.webp"
         },
         {
             "activity_name": "Cocineritos",
@@ -19,7 +19,7 @@
             "place": "Parque Simón Bolivar",
             "excerpt": "Aprende a tocar diferentes instrumentos musicales mientras te diviertes con tus amigos.",
             "description": "Great service!",
-            "thumb":"portrait-woman.webp"
+            "thumb":"src/assets/portrait-woman.webp"
         },
         {
             "activity_name": "Escuela de arte",
@@ -28,7 +28,7 @@
             "place": "Centro Deportivo Compensar",
             "excerpt": "Ya está abierta nuestra escuela de verano 2024. Inscribete ahora y vive una gran experiencia",
             "description": "No hay un mejor servicio!",
-            "thumb":"oldwoman-portrait.webp"
+            "thumb":"src/assets/oldwoman-portrait.webp"
         },
         {
             "activity_name": "Escuela de música",
@@ -37,7 +37,7 @@
             "place": "Parque Simón Bolivar",
             "excerpt": "Diviertete con tus amigos en nuestras actividades acuáticas supervisadas.",
             "description": "No hay un mejor servicio!",
-            "thumb":"oldwoman-portrait.webp"
+            "thumb":"src/assets/oldwoman-portrait.webp"
         }
       ]
     }

@@ -1,26 +1,40 @@
+---
+interface Props {
+	title: string
+}
+
+const {title} = Astro.props
+
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator}/>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Rubik+Moonrocks&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="/src/assets/favicon.svg">
-		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content="Jardín Infantil Magic World Explorers - Bogotá, D.C.">
 		<meta name="keywords" content="Educación, preescolar, Jardín Infantil, Desarrollo Infantil">
-		<title>Magic world Explorers</title>
+		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<main>
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
-
 <style>
 	html,
 	body {
+		box-sizing: content-box;
 		margin: 0;
 		width: 100%;
 		height: 100%;

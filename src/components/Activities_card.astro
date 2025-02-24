@@ -12,7 +12,7 @@ interface Props {
     thumb: string,
 }
 
-const thumbImage = new URL(`../assets/${Astro.props.thumb}`, import.meta.url).href;
+const base = import.meta.env.BASE_URL;
 
 const {activity_name, description, excerpt, thumb, hour, place, date} = Astro.props
 
@@ -26,7 +26,7 @@ const {activity_name, description, excerpt, thumb, hour, place, date} = Astro.pr
     </div>
     <div class="activities-card-content">
         <div class="activities-card--image">
-            <img src={thumbImage} alt="Kids playing" width={100} height={100}/>
+            <Image src={`${base}${thumb}`} alt="Kids playing" width={100} height={100}/>
         </div>
         <div class="activities-card--tittle">
             <h3 set:html={activity_name}></h3>

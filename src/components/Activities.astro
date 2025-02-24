@@ -3,6 +3,9 @@ import '../css/activities.css'
 import ActivitiesCard from '../components/Activities_card.astro'
 import activitiesData from '../content/activities.json'
 
+//import { getCollection } from 'astro:content'
+//const allActivities = await getCollection('activities')
+
 const {result} = activitiesData;
 const {activities} = result;
 const maxActivities = 3;
