@@ -1,9 +1,20 @@
 ---
+import SubscribeForm from "../components/Subscribe_form.astro"
 import Layout from "../layouts/Layout.astro"
+import { Image } from "astro:assets";
+import Family from '../assets/happy-family.webp'
 ---
 <Layout title="Subscripcion">
-    <h1>Subscripcion</h1>
-    <p>Esta es la página de Subscripcion</p>
+    <section class="subscribe_section">
+        <SubscribeForm />
+        <aside class="subscribe_aside">
+            <div class="aside_image_container">
+                <Image src={Family} alt="Familia">
+            </div>
+            <span>*El envío de información no implica un compromiso de suscripción al jardin ni a ninguno de sus servicios. La información suministrada será usada únicamente para fines informativos y será protegida según la ley colombiana de Habeas Data.
+            </span>
+        </aside>
+    </section>
 </Layout>
 
 

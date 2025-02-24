@@ -1,0 +1,38 @@
+---
+import '../css/subscribe.css'
+---
+<div class="subscribe_container">
+    <h1>Formulario de pre-inscripción</h1>
+    <form class="subscribe_form" name="subscribe" method="get" target="_blank">
+        <div class="form_data">
+            <label class="name_label">
+                Nombres:
+                <input name="nombres" id="name" type="text" required>
+            </label>
+            <label class="last_name_label">
+                Apellidos:
+                <input name="apellidos" id="last_name" type="text" required>
+            </label>
+            <label class="mail_label">
+                Correo electrónico:
+                <input name="email" id="email" type="email">
+            </label>
+            <label class="phone_label">
+                Número de contacto:
+                <input name="telefono" id="phone" type="number" required minlength="10">
+            </label>
+            <label class="habeas_data">¿Acepta ud brindar esta información?
+                <input name="accept" id="habeas_data" type="checkbox">
+            </label>
+            
+        </div>
+        <input name="submit" id="submit_btn" type="submit" value="Inscribirse" disabled>
+    </form>
+</div>
+<script>
+    //toggle the disabled attribute for the submit button when click on habeas data input
+    document.getElementById('habeas_data')?.addEventListener('click', function(){
+        const submit = document.getElementById('submit_btn');
+        submit.disabled = !submit.disabled
+    })
+</script>
