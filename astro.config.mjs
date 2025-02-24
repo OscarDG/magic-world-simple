@@ -9,5 +9,4 @@ export default defineConfig({
 
         site: "https://OscarDG.github.io",
         base: "/magic-world-simple/",
-
 });
