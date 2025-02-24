@@ -63,8 +63,9 @@
     justify-content: flex-start;
     align-items: center;
     width: 90%;
-    height: 45%;
+    height: 40%;
     color: #FBFBFB;
+    margin-top: 5%;
   }
   .footer-social h2 {
     margin-bottom: 30px;
@@ -140,9 +141,9 @@
   .main-footer {
     position: relative;
     display: flex;
-    flex-flow: colum nowrap;
+    flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 50vh;
     padding: 0;
   }
   .footer-content {
@@ -150,7 +151,7 @@
     flex-flow: row nowrap;
     align-items: flex-start;
     width: 100%;
-    height: 90%;
+    height: 100%;
     background: #27445D;
   }
   .footer-contact {
@@ -177,9 +178,9 @@
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 100%;
     height: 10%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .footer-contact p {
     width: 80%;
@@ -254,14 +255,12 @@
     transition: transform 0.5s;
   }
   .copy-section {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10%;
-    min-height: 50px;
+    height: 20%;
     color: #101820;
     background: #25282A;
   }

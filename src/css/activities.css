@@ -211,7 +211,7 @@
     align-items: center;
     margin-top: 10%;
     width: 90%;
-    height: 80%;
+    height: 70%;
     margin-bottom: 2%;
   }
   .activities-card {
@@ -221,8 +221,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 30%;
-    height: 95%;
-    max-height: 1000px;
+    height: 90%;
     background: #FBFBFB;
     border: 0;
     border-radius: 20px;
@@ -290,7 +289,7 @@
   }
   .activities-card--image {
     width: 90%;
-    height: 51%;
+    height: 45%;
     margin-top: 5%;
     margin-bottom: 2%;
     border-radius: 15px 15px 0 0;
@@ -308,8 +307,8 @@
     width: 80%;
     height: auto;
     max-height: 5%;
+    margin-top: 5%;
     margin-left: -10%;
-    margin-bottom: 2%;
   }
   .activities-card--tittle h3 {
     width: 90%;
@@ -322,14 +321,14 @@
     align-items: center;
     margin-left: -9%;
     margin-bottom: 2%;
-    width: 82%;
-    font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+    width: 80%;
+    font-size: clamp(0.5rem, 1rem + 0.5vw, 1rem);
   }
   .activities-more {
     position: absolute;
     display: flex;
     justify-content: space-between;
-    bottom: 2%;
+    bottom: 5%;
     right: 5%;
     width: 90%;
     height: 10%;
