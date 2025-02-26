@@ -7,25 +7,25 @@
           "id": 0,
           "service_name": "Asesoría académica",
           "excerpt": "anything",
-          "thumb":"src/assets/portrait-man.webp"
+          "thumb":"kids-with-paper.webp"
         },
         {
             "id": 1,
             "service_name": "Orientación psicológica y ocupacional",
             "excerpt": "anything",
-            "thumb":"src/assets/portrait-man.webp"
+            "thumb":"counseling.webp"
         },
         {
             "id": 2,
             "service_name": "Actividades deportivas",
             "excerpt": "anything",
-            "thumb":"src/assets/portrait-man.webp"
+            "thumb":"sports.webp"
         },
         {
             "id": 3,
             "service_name": "Terapia Ocupacional",
             "excerpt": "anything",
-            "thumb":"src/assets/portrait-man.webp"
+            "thumb":"portrait-man.webp"
         }
       ]
     }
