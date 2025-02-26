@@ -26,7 +26,7 @@ const {activity_name, description, excerpt, thumb, hour, place, date} = Astro.pr
     </div>
     <div class="activities-card-content">
         <div class="activities-card--image">
-            <img src={`src/assets/${thumb}`} alt="Kids playing" width={100} height={100}/>
+            <img src={`/public/${thumb}`} alt="Kids playing" width={100} height={100}/>
         </div>
         <div class="activities-card--tittle">
             <h3 set:html={activity_name}></h3>
