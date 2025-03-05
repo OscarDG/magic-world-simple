@@ -37,7 +37,8 @@
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 95%;
+    width: 90%;
+    max-width: 400px;
     height: 55vh;
     margin-top: 10%;
     background: #FBFBFB;

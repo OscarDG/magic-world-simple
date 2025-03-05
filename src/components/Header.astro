@@ -1,7 +1,7 @@
 ---
-import '../css/index.css'
+import '@/css/index.css'
 import {Image} from 'astro:assets'
-import Logo from '../assets/logo.webp'
+import Logo from '@/assets/logo.webp'
 
 ---
 <header class="main_header">
@@ -9,6 +9,7 @@ import Logo from '../assets/logo.webp'
         <a href="/">
             <Image src={Logo} alt="Header Logo" loading={'eager'}/>
         </a>
+        <h2>Magic world Explorers</h2>
     </div>
     <div class="header_menu_mobile">
         <span class="line"></span>
