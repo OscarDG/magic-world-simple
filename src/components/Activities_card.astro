@@ -1,19 +1,18 @@
 ---
 import '@/css/activities.css'
 import { Image } from 'astro:assets'
+import type { ImageMetadata } from 'astro';
 interface Props {
-    activity_name: string,
+    name: string,
     date: string,
     hour: string,
     place: string,
     excerpt: string,
     description: string,
-    thumb: string,
+    thumb: ImageMetadata
 }
 
-
-const {activity_name, description, excerpt, thumb, hour, place, date} = Astro.props
-
+const {name, description, excerpt, thumb, hour, place, date} = Astro.props
 ---
 <div class="activities-card">
     <div class="activities-card-info">
@@ -24,10 +23,10 @@ const {activity_name, description, excerpt, thumb, hour, place, date} = Astro.pr
     </div>
     <div class="activities-card-content">
         <div class="activities-card--image">
-            <Image src={`/src/assets/${thumb}`} alt="Kids playing" width={100} height={100}/>
+            <Image src={thumb} alt="Kids playing" quality={100} width={300} height={200}/>
         </div>
         <div class="activities-card--tittle">
-            <h3 set:html={activity_name}></h3>
+            <h3 set:html={name}></h3>
         </div>
         <div class="activities-card--text">
             <p>{excerpt}</p>

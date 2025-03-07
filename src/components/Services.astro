@@ -6,13 +6,45 @@ import ServicesCard from './Services_card.astro'
 import Planet1 from '../assets/planet1.svg'
 import Planet2 from '../assets/planet2.svg'
 import Planet3 from '../assets/planet3.svg'
+import counselImage from '@/assets/kids-with-paper.webp'
+import emotionalImage from '@/assets/counseling.webp'
+import sportsImage from '@/assets/sports.webp'
+import therapyImage from '@/assets/kids-playing.webp'
 
-import servicesData from '../content/services.json'
+//import servicesData from '../content/services.json'
+//const {result} = servicesData;
+//const {services} = result;
+const localServices = [
+    {
+        id: 0,
+        name: "Asesoría académica",
+        excerpt: "anything",
+        thumb:counselImage
+    },
+    {
+        id: 1,
+        name: "Orientación psicológica y ocupacional",
+        excerpt: "anything",
+        thumb:emotionalImage
+    },
+    {
+        id: 2,
+        name: "Actividades deportivas",
+        excerpt: "anything",
+        thumb:sportsImage
+    },
+    {
+        id: 3,
+        name: "Terapia Ocupacional",
+        excerpt: "anything",
+        thumb:therapyImage
+    }
+];
 
-const {result} = servicesData;
-const {services} = result;
 const maxServices = 3;
-const limitedServices = services.slice(0, maxServices)
+const limitedServices = localServices.slice(0, maxServices)
+
+const text = encodeURI('Hola, quisiera más información')
 
 ---
 <section class="services_section" id="services">
@@ -29,7 +61,7 @@ const limitedServices = services.slice(0, maxServices)
                 <>
                     {
                         limitedServices.map((service) => (
-                            <ServicesCard {...service}/>
+                            <ServicesCard id = {service.id} name={service.name} excerpt={service.excerpt} thumb={service.thumb} />
                         ))
                     }
                 </>
@@ -38,11 +70,11 @@ const limitedServices = services.slice(0, maxServices)
         </div>
     </div>
     <div class="services_cta">
-        <a href="http://wa.me/573103468979" target="_blank">MÁS INFORMACIÓN</a>
+        <a href=`http://wa.me/573103468979?text=${text}` target="_blank">MÁS INFORMACIÓN</a>
     </div>
 </section>
 <script>
-    function handleViewPortChange(event){
+    function handleViewPortChange(event: MediaQueryList | MediaQueryListEvent){
         if(event.matches){
             document.addEventListener("DOMContentLoaded", () => {
                 import("motion").then(({ scroll, animate }) => {

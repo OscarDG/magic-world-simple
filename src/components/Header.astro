@@ -3,6 +3,7 @@ import '@/css/index.css'
 import {Image} from 'astro:assets'
 import Logo from '@/assets/logo.webp'
 
+const text = encodeURI('Hola, quisiera más información')
 ---
 <header class="main_header">
     <div class="header_logo">
@@ -19,12 +20,10 @@ import Logo from '@/assets/logo.webp'
     </div>
     <nav class="header_nav">
         <ul class="nav_list">
-            <a href="#main_section"><li>Sobre nosotros</li></a>
-            <a href="#services"><li>Nuestros servicios</li></a>
-            <a href="#team"><li>Nuestro equipo</li></a>
+            <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=2bBm42XULkqVWzgjUMAzgDX3ViaBFDtPq2Qf1INGG2BUME83RTlUTlpOQTg2RTMyOUNISVRETVVQMC4u" target="_blank">Haz parte</a></li>
+            <a class="header_btn--contact" href=`http://wa.me/573103468979?text=${text}` target="_blank">Contacto</a>
         </ul>
     </nav>
-    <a class="header_btn--contact" href="http://wa.me/573103468979" target="_blank">Contacto</a>
 </header>
 <script>
     const navBtn = document.querySelector('.header_menu_mobile');
