@@ -1,9 +1,13 @@
 ---
 import '@/css/testimonies.css'
 import Star from '@/assets/star.svg'
-import reviewsData from "@/content/reviews.json"
+//import reviewsData from "@/content/reviews.json"
 import {Image} from "astro:assets"
-import { string } from 'astro:schema';
+import type { ImageMetadata } from 'astro'
+import TestimonyOneImage from '@/assets/oldwoman-portrait.webp'
+import TestimonyTwoImage from '@/assets/portrait-woman.webp'
+import TestimonyThreeImage from '@/assets/portrait-man.webp'
+
 
 //const {result} = reviewsData;
 //const {reviews} = result;
@@ -11,43 +15,43 @@ import { string } from 'astro:schema';
 const reviews = [
     {
         id: 1,
-        author_name: "John Doe",
+        name: "John Doe",
         rating: 5,
         text: "Great service!",
         time: 1672444800,
-        thumb:"portrait-man.webp"
+        thumb:TestimonyOneImage
     },
     {
         id: 2,
-        author_name: "Mary Jane",
+        name: "Mary Jane",
         rating: 4,
         text: "Great service!",
         time: 1672444801,
-        thumb:"portrait-woman.webp"
+        thumb:TestimonyTwoImage
     },
     {
         id: 3,
-        author_name: "Peter Parker",
+        name: "Peter Parker",
         rating: 3,
         text: "No hay un mejor servicio!",
         time: 1672444801,
-        thumb:"oldwoman-portrait.webp"
+        thumb:TestimonyThreeImage
     },
     {
         id: 4,
-        author_name: "Peter Parker",
+        name: "Peter Parker",
         rating: 3,
         text: "No hay un mejor servicio!",
         time: 1672444801,
-        thumb:"oldwoman-portrait.webp"
+        thumb:TestimonyThreeImage
     },
     {
         id: 5,
-        author_name: "Peter Parker",
+        name: "Peter Parker",
         rating: 3,
         text: "No hay un mejor servicio!",
         time: 1672444801,
-        thumb:"oldwoman-portrait.webp"
+        thumb:TestimonyThreeImage
     }
 ];
 
@@ -61,8 +65,8 @@ const limitedReviews = reviews.slice(0, maxReviews)
             <>
             {limitedReviews.map(review => (
             <div class="testimonies" id={`slide_${review.id}`}>
-                <span class="thumb"><Image src={`/src/assets/${review.thumb}`} width= {150} height= {150} alt={review.author_name}/></span>
-                <h3>{review.author_name}</h3>
+                <span class="thumb"><Image src={review.thumb} width= {250} height= {250} alt={review.name}/></span>
+                <h3>{review.name}</h3>
                 <p class="subtitle">Madre de Familia</p>
                 <p class="pharagraph">{review.text}</p>
                 <div class="stars_container">
