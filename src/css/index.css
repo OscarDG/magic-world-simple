@@ -45,10 +45,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    max-width: 80px;
-    height: 35%;
-    max-height: 80px;
+    width: 15%;
+    max-width: 70px;
+    height: 30%;
+    max-height: 70px;
     border-radius: 10px;
     padding: 20px 5px;
     cursor: pointer;
@@ -63,27 +63,32 @@
     transition-duration: 0.2s;
   }
   .header_menu_mobile span:nth-child(1) {
+    position: absolute;
+    top: 20%;
     width: 70%;
     height: 8px;
-    margin-bottom: 10px;
   }
   .header_menu_mobile span:nth-child(2) {
     position: absolute;
-    width: 62%;
+    top: 45%;
+    width: 70%;
     height: 7px;
     transform: rotate(0);
     transition: transform 0.2s ease-in-out;
   }
   .header_menu_mobile span:nth-child(3) {
+    position: absolute;
+    bottom: 45%;
     width: 70%;
     height: 7px;
     transform: rotate(0);
     transition: transform 0.2s ease-in-out;
   }
   .header_menu_mobile span:nth-child(4) {
+    position: absolute;
+    bottom: 20%;
     width: 70%;
     height: 8px;
-    margin-top: 10px;
   }
   .header_menu_mobile span:nth-child(1).open {
     transform: scale(0);
@@ -101,7 +106,7 @@
   }
   .header_nav {
     position: absolute;
-    top: 100%;
+    top: 85%;
     display: none;
     flex-direction: column;
     justify-content: space-evenly;
@@ -112,20 +117,19 @@
   .header_nav.open {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    min-height: 250px;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 80%;
+    min-height: 200px;
   }
   .nav_list {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border-radius: 0 0 20px 20px;
     background: #FBFBFB;
   }
@@ -136,7 +140,7 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    width: auto;
+    width: 30%;
     font-family: "Sour Gummy", serif;
   }
   .nav_list a {
@@ -194,7 +198,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 25%;
+    width: 35%;
     min-width: 100px;
     height: 100%;
     min-height: 70px;
@@ -206,10 +210,10 @@
     align-items: center;
     width: 100%;
     min-width: 100px;
-    max-width: 120px;
+    max-width: 130px;
     height: 100%;
     min-height: 100px;
-    max-height: 120px;
+    max-height: 130px;
     cursor: pointer;
   }
   .header_logo a img {
